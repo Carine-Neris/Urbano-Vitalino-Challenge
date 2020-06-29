@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}Urbano Vitalino{% endblock %}</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/processos_cadastrar.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="{% url 'cadastro_processos:cadastro_processo' %}">Home</a></li>
+                  <li class="breadcrumb-item active"><a href="{% url 'processos:processos'%}"> Listar Processos </a></li>
+                </ol>
+              </nav>
+        </div>
+
+        {% block content %}
+        <div class="title">
+        <h1> Enviar Processos</h1>
+        </div>
+        <div class="content container">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                    {% csrf_token %}
+                    <input class="form-control-file" type="file" id="file1" name="file">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                </form>
+        </div>
+        {% endblock %}
+
+    </body>
+</html>
+
+
+
+
+    

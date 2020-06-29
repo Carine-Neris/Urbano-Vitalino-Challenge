@@ -1,0 +1,15 @@
+{% extends 'processo_cadastrar.html' %}
+{% block content %}
+
+
+{% for processo in processos %}
+    <div class="card" style="width: 100%;">
+    	<ul class="list-group list-group-flush ">
+            <li >Pasta: {{ processo.pasta }}</li>
+            <li >Comarca: {{ processo.comarca }}</li>
+            <li >Uf: {{ processo.uf }}</li>
+        </ul>
+    </div>
+{% endfor %}
+
+{% endblock %}
