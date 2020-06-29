@@ -7,7 +7,7 @@
 * Rode as migrações.
 
 ```
-git clone 
+git clone https://github.com/Carine-Neris/Urbano-Vitalino-Challenge.git
 python -m venv .venv
 .venv/Script/activate
 pip install -r requirements.txt
